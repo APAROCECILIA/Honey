@@ -274,7 +274,7 @@ a:focus {
   left: 0;
   width: 75%;
   height: 100%;
-  background-image: url(../images/slider-bg1.png);
+  background-image: url("{% static 'images/HB.jpg' %}");
   background-size: 100% 100%;
   z-index: 2;
 }

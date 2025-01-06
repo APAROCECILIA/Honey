@@ -7,10 +7,10 @@
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  
+
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  
+
   <!-- Site Metas -->
   <meta name="keywords" content="" />
   <meta name="description" content="" />
@@ -27,11 +27,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
 
   <!-- If you have compiled your .scss file into .css, use the .css version -->
-  <link rel="stylesheet" href="{% static 'css/css/style.css' %}" />  <!-- Assuming you compiled 'style.scss' into 'style.css' -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <!-- Assuming you compiled 'style.scss' into 'style.css' -->
 
   <!-- Fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
-  
+
   <!-- Slick slider theme -->
   <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}" />
 
@@ -64,7 +65,8 @@
               CecilHoney
             </a>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class=""> </span>
             </button>
 
@@ -86,7 +88,7 @@
                   <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                 </li>
               </ul>
-              
+
 
               <div class="quote_btn-container">
                 <form class="form-inline">
@@ -113,22 +115,21 @@
                   <div class="col-md-6">
                     <div class="detail_box">
                       <h1>
-                        Chocolate <br>
+                        Pure <br>
                         <span>
-                          Yummy
+                          Organic
                         </span>
                       </h1>
-                      <a href="#">
-                        <span>
-                          Read More
-                        </span>
-                        <img src="images/white-arrow.png" alt="">
-                      </a>
+
+                      <span>
+                        Natural Honey
+                      </span>
+
                     </div>
                   </div>
                   <div class="col-md-4 ml-auto">
                     <div class="img-box">
-                      <img src="images/slider-img.png" alt="">
+                      <img src="{% static 'images/h1.jpg' %}" alt="">
                     </div>
                   </div>
                 </div>
@@ -140,22 +141,21 @@
                   <div class="col-md-6">
                     <div class="detail_box">
                       <h1>
-                        Chocolate <br>
+                        Pure <br>
                         <span>
-                          Yummy
+                          Organic
                         </span>
                       </h1>
-                      <a href="#">
-                        <span>
-                          Read More
-                        </span>
-                        <img src="images/white-arrow.png" alt="">
-                      </a>
+
+                      <span>
+                        Natural Honey
+                      </span>
+
                     </div>
                   </div>
                   <div class="col-md-4 ml-auto">
                     <div class="img-box">
-                      <img src="images/slider-img.png" alt="">
+                      <img src="{% static 'images/h2.png' %}" alt="">
                     </div>
                   </div>
                 </div>
@@ -167,22 +167,22 @@
                   <div class="col-md-6">
                     <div class="detail_box">
                       <h1>
-                        Chocolate <br>
+                        Pure <br>
                         <span>
-                          Yummy
+                          Organic
                         </span>
                       </h1>
-                      <a href="#">
-                        <span>
-                          Read More
-                        </span>
-                        <img src="images/white-arrow.png" alt="">
-                      </a>
+
+                      <span>
+                        natural Honey
+                      </span>
+
+
                     </div>
                   </div>
                   <div class="col-md-4 ml-auto">
                     <div class="img-box">
-                      <img src="images/slider-img.png" alt="">
+                      <img src="{%static 'images/h3.png' %}" alt="">
                     </div>
                   </div>
                 </div>
@@ -213,22 +213,22 @@
             <div class="detail-box">
               <div class="heading_container">
                 <h2>
-                  About Our Company
+                  About Us
                 </h2>
               </div>
               <p>
-                Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web pagend web page editors now use Lorem Ipsum as their default model text, </p>
-              <a href="#">
-                <span>
-                  Read More
-                </span>
-                <img src="images/color-arrow.png" alt="">
-              </a>
+                Founded a year ago, we specialize in premium honey sourced directly from the rich 
+                landscapes of Arua and Congo. Our commitment to quality ensures that every bottle contains
+                pure, raw honey, harvested with care and dedication. With a focus on sustainability and
+                local partnerships, we bring you nature's sweetest gift, straight from the hive to your 
+                doorstep. Experience the finest honey, crafted with passion and delivered fresh for your 
+                enjoyment </p>
+             
             </div>
           </div>
           <div class="col-md-6">
             <div class="img-box">
-              <img src="images/about-img.png" alt="">
+              <img src="{% static 'images/about-img.png' % }" alt="">
             </div>
           </div>
         </div>
@@ -243,25 +243,24 @@
       <div class="container">
         <div class="heading_container">
           <h2>
-            Our chocolate products
+            Our Honey products
           </h2>
           <p>
-            Many desktop publishing packages and web pagend web page editors now use Lorem Ipsum as their
-          </p>
+            Our honey products are pure, sustainably sourced, and crafted for the finest taste and quality          </p>
         </div>
       </div>
       <div class="container">
         <div class="chocolate_container">
           <div class="box">
             <div class="img-box">
-              <img src="images/chocolate1.png" alt="">
+              <img src="{% static 'images/h4.jpg' %}" alt="">
             </div>
             <div class="detail-box">
               <h6>
-                Yummy <span>chocolate</span>
+                Yummy <span>Honey</span>
               </h6>
               <h5>
-                $5.0
+                In all Qty
               </h5>
               <a href="">
                 BUY NOW
@@ -270,14 +269,14 @@
           </div>
           <div class="box">
             <div class="img-box">
-              <img src="images/chocolate2.png" alt="">
+              <img src="{% static 'images/h6.jpeg' %}" alt="">
             </div>
             <div class="detail-box">
               <h6>
-                Yummy <span>chocolate</span>
+                20g <span>Small Container</span>
               </h6>
               <h5>
-                $5.0
+                UGX 1K
               </h5>
               <a href="">
                 BUY NOW
@@ -286,14 +285,14 @@
           </div>
           <div class="box">
             <div class="img-box">
-              <img src="images/chocolate3.png" alt="">
+              <img src="{% static 'images/h7.jpeg' %}" alt="">
             </div>
             <div class="detail-box">
               <h6>
-                Yummy <span>chocolate</span>
+                125g <span>Honey</span>
               </h6>
               <h5>
-                $5.0
+                UGX 3K
               </h5>
               <a href="">
                 BUY NOW
@@ -302,14 +301,14 @@
           </div>
           <div class="box">
             <div class="img-box">
-              <img src="images/chocolate1.png" alt="">
+              <img src="{% static 'images/h8.jpeg' %}" alt="">
             </div>
             <div class="detail-box">
               <h6>
-                Yummy <span>chocolate</span>
+                250g <span>Honey</span>
               </h6>
               <h5>
-                $5.0
+                UGX 8K
               </h5>
               <a href="">
                 BUY NOW
@@ -318,14 +317,14 @@
           </div>
           <div class="box">
             <div class="img-box">
-              <img src="images/chocolate2.png" alt="">
+              <img src=" {% static 'images/h9.jpeg' %}" alt="">
             </div>
             <div class="detail-box">
               <h6>
-                Yummy <span>chocolate</span>
+                1LTR <span>Honey</span>
               </h6>
               <h5>
-                $5.0
+                UGX 25K
               </h5>
               <a href="">
                 BUY NOW
@@ -334,14 +333,14 @@
           </div>
           <div class="box">
             <div class="img-box">
-              <img src="images/chocolate3.png" alt="">
+              <img src="{% static 'images/chocolate3.png' %}" alt="">
             </div>
             <div class="detail-box">
               <h6>
-                Yummy <span>chocolate</span>
+                5LTR <span>Honey</span>
               </h6>
               <h5>
-                $5.0
+                UGX 100K
               </h5>
               <a href="">
                 BUY NOW
@@ -372,7 +371,7 @@
             </a>
           </div>
           <div class="img-box">
-            <img src="images/offer-img.png" alt="">
+            <img src="{% static 'images/offer-img.png' %}" alt="">
           </div>
         </div>
         <div class="btn-box">
@@ -380,7 +379,7 @@
             <span>
               See More
             </span>
-            <img src="images/color-arrow.png" alt="">
+            <img src="{% static 'images/color-arrow.png' %}" alt="">
           </a>
         </div>
       </div>
@@ -395,7 +394,7 @@
         <div class="row">
           <div class="col-lg-4 ml-auto">
             <div class="img-box sub_img-box">
-              <img src="images/client-chocolate.png" alt="">
+              <img src="{% static 'images/client-chocolate.png' %}" alt="">
             </div>
           </div>
           <div class="col-lg-6 px-0">
@@ -410,14 +409,19 @@
                   <div class="carousel-item active">
                     <div class="box">
                       <div class="img-box">
-                        <img src="images/client-img.jpg" alt="">
+                        <img src="{% static 'images/client-img.jpg' %}" alt="">
                       </div>
                       <div class="detail-box">
                         <h4>
                           Gero Miliya
                         </h4>
                         <p>
-                          long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
+                          long established fact that a reader will be distracted by the readable content of a page when
+                          looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that
+                          a reader will be distracted by the readable content of a page when looking at its layout. The
+                          point of using Lorem Ipsum is that it haslong established fact that a reader will be
+                          distracted by the readable content of a page when looking at its layout. The point of using
+                          Lorem Ipsum is that it has
                         </p>
                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                       </div>
@@ -426,14 +430,19 @@
                   <div class="carousel-item">
                     <div class="box">
                       <div class="img-box">
-                        <img src="images/client-img.jpg" alt="">
+                        <img src="{% static 'images/client-img.jpg' %}" alt="">
                       </div>
                       <div class="detail-box">
                         <h4>
                           Gero Miliya
                         </h4>
                         <p>
-                          long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
+                          long established fact that a reader will be distracted by the readable content of a page when
+                          looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that
+                          a reader will be distracted by the readable content of a page when looking at its layout. The
+                          point of using Lorem Ipsum is that it haslong established fact that a reader will be
+                          distracted by the readable content of a page when looking at its layout. The point of using
+                          Lorem Ipsum is that it has
                         </p>
                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                       </div>
@@ -442,14 +451,19 @@
                   <div class="carousel-item">
                     <div class="box">
                       <div class="img-box">
-                        <img src="images/client-img.jpg" alt="">
+                        <img src="{% static 'images/client-img.jpg' %}" alt="">
                       </div>
                       <div class="detail-box">
                         <h4>
                           Gero Miliya
                         </h4>
                         <p>
-                          long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
+                          long established fact that a reader will be distracted by the readable content of a page when
+                          looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that
+                          a reader will be distracted by the readable content of a page when looking at its layout. The
+                          point of using Lorem Ipsum is that it haslong established fact that a reader will be
+                          distracted by the readable content of a page when looking at its layout. The point of using
+                          Lorem Ipsum is that it has
                         </p>
                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                       </div>
@@ -559,22 +573,25 @@
                 Menu
               </h4>
               <div class="info_links_menu">
-                <a href="index.html">
+                <a href="{% url 'index' %}">
                   Home
                 </a>
-                <a href="about.html">
+                <a href="{% url 'about' %}">
                   About
                 </a>
-                <a href="chocolate.html">
+                <a href="{% url 'chocolate' %}">
                   Chocolates
                 </a>
-                <a href="testimonial.html">
+                <a href="{% url 'testimonial' %}">
                   Testimonial
                 </a>
-                <a href="contact.html">
+                <a href="{% url 'contact' %}">
                   Contact us
                 </a>
               </div>
+
+
+
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -584,7 +601,7 @@
               </h4>
               <div class="insta_box">
                 <div class="img-box">
-                  <img src="images/insta-img.png" alt="">
+                  <img src="{% static 'images/insta-img.png' %}" alt="">
                 </div>
                 <p>
                   long established fact that a reader
@@ -592,7 +609,7 @@
               </div>
               <div class="insta_box">
                 <div class="img-box">
-                  <img src="images/insta-img.png" alt="">
+                  <img src="{% static 'images/insta-img.png' %}" alt="">
                 </div>
                 <p>
                   long established fact that a reader
@@ -606,7 +623,8 @@
                 Company
               </h4>
               <p class="mb-0">
-                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                distribution of letters, as opposed to
               </p>
             </div>
           </div>
@@ -618,19 +636,19 @@
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  Bukoto, Mulimira
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Call +256 776178913
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope"></i>
                 <span>
-                  demo@gmail.com
+                  ceciliaheavens256@gmail.com
                 </span>
               </a>
             </div>
@@ -656,21 +674,22 @@
   </footer>
   <!-- footer section -->
   <!-- jQuery -->
-  <script  src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-  
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+
   <!-- Bootstrap JS -->
-  <script  src="{% static 'js/bootstrap.js' %}"></script>
-  
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+
   <!-- Slick Slider -->
-  <script  src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+
   <!-- Custom JS -->
-  <script  src="{% static 'js/custom.js' %}"></script>
-  
+  <script src="{% static 'js/custom.js' %}"></script>
+
   <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
-  
+
 
 </body>
 
