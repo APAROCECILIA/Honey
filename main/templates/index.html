@@ -18,6 +18,9 @@
 
   <title>Cecil</title>
 
+  <!-- Maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
 
@@ -393,8 +396,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <div class="img-box sub_img-box">
-              <img src="{% static 'images/client-chocolate.png' %}" alt="">
+            <div  style="padding-left: 20px; padding-bottom: 100px;"  class="img-box sub_img-box">
+              <img src="{% static 'images/img1.png' %}" alt="">
             </div>
           </div>
           <div class="col-lg-6 px-0">
@@ -413,15 +416,12 @@
                       </div>
                       <div class="detail-box">
                         <h4>
-                          Gero Miliya
+                          Henry
                         </h4>
                         <p>
-                          long established fact that a reader will be distracted by the readable content of a page when
-                          looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that
-                          a reader will be distracted by the readable content of a page when looking at its layout. The
-                          point of using Lorem Ipsum is that it haslong established fact that a reader will be
-                          distracted by the readable content of a page when looking at its layout. The point of using
-                          Lorem Ipsum is that it has
+                          The richness of this honey is unmatched! From the first spoonful, 
+                          I could tell it's pure and organic. Its smooth texture and natural 
+                          sweetness make it perfect for my tea and baking. Highly recommended!
                         </p>
                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                       </div>
@@ -434,15 +434,12 @@
                       </div>
                       <div class="detail-box">
                         <h4>
-                          Gero Miliya
+                          Trina
                         </h4>
                         <p>
-                          long established fact that a reader will be distracted by the readable content of a page when
-                          looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that
-                          a reader will be distracted by the readable content of a page when looking at its layout. The
-                          point of using Lorem Ipsum is that it haslong established fact that a reader will be
-                          distracted by the readable content of a page when looking at its layout. The point of using
-                          Lorem Ipsum is that it has
+                          I've tasted many brands, but this honey stands out as genuinely natural. 
+                          It's free from additives and has a delightful aroma that proves its 
+                          authenticity. A must-try for health enthusiasts!
                         </p>
                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                       </div>
@@ -455,15 +452,12 @@
                       </div>
                       <div class="detail-box">
                         <h4>
-                          Gero Miliya
+                          Adam
                         </h4>
                         <p>
-                          long established fact that a reader will be distracted by the readable content of a page when
-                          looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that
-                          a reader will be distracted by the readable content of a page when looking at its layout. The
-                          point of using Lorem Ipsum is that it haslong established fact that a reader will be
-                          distracted by the readable content of a page when looking at its layout. The point of using
-                          Lorem Ipsum is that it has
+                          This honey is the real deal! It tastes as nature intended—raw, pure, and 
+                          flavorful. My family loves it, and it’s now our go-to choice for all meals. 
+                          Truly exceptional quality!
                         </p>
                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                       </div>
@@ -498,7 +492,7 @@
           <div class="col-md-5 col-lg-4 offset-md-1 offset-lg-2">
             <div class="form_container">
               <div class="heading_container">
-                <h2>
+                <h2 style="color: #5A4635;">
                   Contact Us
                 </h2>
               </div>
@@ -523,10 +517,11 @@
               </form>
             </div>
           </div>
-          <div class="col-md-6  px-0">
+          <div class="col-md-6 px-0">
             <div class="map_container">
               <div class="map">
-                <div id="googleMap"></div>
+                <!-- Replace Google Map div with Leaflet Map -->
+                <div id="map" style="width: 100%; height: 500px;"></div>
               </div>
             </div>
           </div>
@@ -622,7 +617,7 @@
               <h4>
                 Company
               </h4>
-              <p class="mb-0">
+              <p class="mb-0" style="color: #333333;">
                 when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
                 distribution of letters, as opposed to
               </p>
@@ -686,9 +681,35 @@
   <script src="{% static 'js/custom.js' %}"></script>
 
   <!-- Google Map -->
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-  <!-- End Google Map -->
+  <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script> -->
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    // Initialize the map and set its view to Bukoto's coordinates
+    const map = L.map('map').setView([0.3617, 32.5912], 14);
+  
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+  
+    // Add a marker for Bukoto
+    const marker = L.marker([0.3617, 32.5912]).addTo(map);
+    marker.bindPopup('<b>Bukoto</b><br>A location in Uganda.').openPopup();
+  </script>
+  
+
+
+
+    
+ 
+ 
+
+
+
+    <!-- End Google Map -->
 
 
 </body>
