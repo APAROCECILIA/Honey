@@ -10,8 +10,8 @@ def about(request):
     return render(request, 'about.html')
 
 
-def chocolate(request):
-    return render(request, 'chocolate.html')
+def honey(request):
+    return render(request, 'honey.html')
 
 
 def testimonial(request):

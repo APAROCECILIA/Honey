@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -12,11 +13,12 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>ChocoLux</title>
+  <title>Company</title>
 
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
   <!--slick slider stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
@@ -89,7 +91,7 @@
 
     <!-- about section -->
 
-    <section class="about_section layout_padding ">
+    <section  id = "about" class="about_section layout_padding ">
       <div class="container  ">
         <div class="row">
           <div class="col-md-6">
@@ -122,7 +124,7 @@
 
 
     <!-- info section -->
-    <section class="info_section layout_padding2">
+    <section id = "info" class="info_section layout_padding2">
       <div class="container">
         <div class="row info_form_social_row">
           <div class="col-md-8 col-lg-9">
@@ -163,8 +165,8 @@
                 <a href="about.html">
                   About
                 </a>
-                <a href="chocolate.html">
-                  Chocolates
+                <a href="honey.html">
+                  Honey
                 </a>
                 <a href="testimonial.html">
                   Testimonial

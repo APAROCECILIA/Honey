@@ -18,6 +18,10 @@
 
   <title>Cecil</title>
 
+  <!-- FavIcon -->
+  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+
+
   <!-- Maps -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
@@ -81,8 +85,8 @@
                 <li class="nav-item {% if request.path == '/about/' %}active{% endif %}">
                   <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
-                <li class="nav-item {% if request.path == '/chocolates/' %}active{% endif %}">
-                  <a class="nav-link" href="{% url 'chocolate' %}">Chocolates</a>
+                <li class="nav-item {% if request.path == '/honey/' %}active{% endif %}">
+                  <a class="nav-link" href="{% url 'honey' %}">Honey</a>
                 </li>
                 <li class="nav-item {% if request.path == '/testimonial/' %}active{% endif %}">
                   <a class="nav-link" href="{% url 'testimonial' %}">Testimonial</a>
@@ -93,16 +97,7 @@
               </ul>
 
 
-              <div class="quote_btn-container">
-                <form class="form-inline">
-                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-                </form>
-                <a href="">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                </a>
-              </div>
+             
             </div>
           </nav>
         </div>
@@ -209,7 +204,7 @@
 
     <!-- about section -->
 
-    <section class="about_section layout_padding ">
+    <section  class="about_section layout_padding ">
       <div class="container  ">
         <div class="row">
           <div class="col-md-6">
@@ -242,7 +237,7 @@
 
     <!-- chocolate section -->
 
-    <section class="chocolate_section ">
+    <section id="honey" class="chocolate_section ">
       <div class="container">
         <div class="heading_container">
           <h2>
@@ -272,7 +267,7 @@
           </div>
           <div class="box">
             <div class="img-box">
-              <img src="{% static 'images/h6.jpeg' %}" alt="">
+              <img src="{% static 'images/h6.jpg' %}" alt="">
             </div>
             <div class="detail-box">
               <h6>
@@ -288,7 +283,7 @@
           </div>
           <div class="box">
             <div class="img-box">
-              <img src="{% static 'images/h7.jpeg' %}" alt="">
+              <img src="{% static 'images/h7.png' %}" alt="">
             </div>
             <div class="detail-box">
               <h6>
@@ -304,7 +299,7 @@
           </div>
           <div class="box">
             <div class="img-box">
-              <img src="{% static 'images/h8.jpeg' %}" alt="">
+              <img src="{% static 'images/h8.jpg' %}" alt="">
             </div>
             <div class="detail-box">
               <h6>
@@ -320,7 +315,7 @@
           </div>
           <div class="box">
             <div class="img-box">
-              <img src=" {% static 'images/h9.jpeg' %}" alt="">
+              <img src=" {% static 'images/h9.jpg' %}" alt="">
             </div>
             <div class="detail-box">
               <h6>
@@ -336,7 +331,7 @@
           </div>
           <div class="box">
             <div class="img-box">
-              <img src="{% static 'images/chocolate3.png' %}" alt="">
+              <img src="{% static 'images/h01.jpg' %}" alt="">
             </div>
             <div class="detail-box">
               <h6>
@@ -363,26 +358,25 @@
         <div class="box">
           <div class="detail-box">
             <h2>
-              Offers on chocolates
+              Cecil Pure Honey
             </h2>
             <h3>
-              Get 5% Offer <br>
-              any Chocolate items
+              Nanture's Golden Gift<br>
+              Sourced With Care, Shared With Love!
             </h3>
             <a href="">
               Buy Now
             </a>
           </div>
           <div class="img-box">
-            <img src="{% static 'images/offer-img.png' %}" alt="">
+            <img src="{% static 'images/h1.png' %}" alt="">
           </div>
         </div>
         <div class="btn-box">
           <a href="">
             <span>
-              See More
+              Cecil Honey
             </span>
-            <img src="{% static 'images/color-arrow.png' %}" alt="">
           </a>
         </div>
       </div>
@@ -392,12 +386,12 @@
 
     <!-- client section -->
 
-    <section class="client_section">
+    <section  class="client_section">
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <div  style="padding-left: 20px; padding-bottom: 100px;"  class="img-box sub_img-box">
-              <img src="{% static 'images/img1.png' %}" alt="">
+            <div  style="padding-top: 100px; padding-right: 50px;"  class="img-box sub_img-box">
+              <img src="{% static 'images/a1.jpg' %}" alt="">
             </div>
           </div>
           <div class="col-lg-6 px-0">
@@ -412,7 +406,7 @@
                   <div class="carousel-item active">
                     <div class="box">
                       <div class="img-box">
-                        <img src="{% static 'images/client-img.jpg' %}" alt="">
+                        <img src="{% static 'images/Henry.png' %}" alt="">
                       </div>
                       <div class="detail-box">
                         <h4>
@@ -430,11 +424,11 @@
                   <div class="carousel-item">
                     <div class="box">
                       <div class="img-box">
-                        <img src="{% static 'images/client-img.jpg' %}" alt="">
+                        <img src="{% static 'images/Marble.jpeg' %}" alt="">
                       </div>
                       <div class="detail-box">
                         <h4>
-                          Trina
+                          Marble
                         </h4>
                         <p>
                           I've tasted many brands, but this honey stands out as genuinely natural. 
@@ -448,11 +442,11 @@
                   <div class="carousel-item">
                     <div class="box">
                       <div class="img-box">
-                        <img src="{% static 'images/client-img.jpg' %}" alt="">
+                        <img src="{% static 'images/Rashid.jpg' %}" alt="">
                       </div>
                       <div class="detail-box">
                         <h4>
-                          Adam
+                          Rashid
                         </h4>
                         <p>
                           This honey is the real deal! It tastes as nature intended—raw, pure, and 
@@ -574,8 +568,8 @@
                 <a href="{% url 'about' %}">
                   About
                 </a>
-                <a href="{% url 'chocolate' %}">
-                  Chocolates
+                <a href="{% url 'honey' %}">
+                  Honey
                 </a>
                 <a href="{% url 'testimonial' %}">
                   Testimonial
@@ -596,18 +590,18 @@
               </h4>
               <div class="insta_box">
                 <div class="img-box">
-                  <img src="{% static 'images/insta-img.png' %}" alt="">
+                  <img src="{% static 'images/insta1.jpg' %}" alt="">
                 </div>
                 <p>
-                  long established fact that a reader
+                  Sunshine in a Jar
                 </p>
               </div>
               <div class="insta_box">
                 <div class="img-box">
-                  <img src="{% static 'images/insta-img.png' %}" alt="">
+                  <img src="{% static 'images/insta2.jpg' %}" alt="">
                 </div>
                 <p>
-                  long established fact that a reader
+                  Bee crafted goodness
                 </p>
               </div>
             </div>
@@ -618,8 +612,9 @@
                 Company
               </h4>
               <p class="mb-0" style="color: #333333;">
-                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                distribution of letters, as opposed to
+                Sustainably sourced from Arua and Congo, delivering natural sweetness and
+                unmatched purity in every jar.
+               
               </p>
             </div>
           </div>
