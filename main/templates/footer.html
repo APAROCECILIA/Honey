@@ -1,0 +1,203 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+  
+  
+    <!-- FavIcon -->
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+  
+  
+    <!-- Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  
+  
+    <!-- External slick slider stylesheet (no need to use static for external URLs) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+  
+    <!-- If you have compiled your .scss file into .css, use the .css version -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <!-- Assuming you compiled 'style.scss' into 'style.css' -->
+  
+    <!-- Fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+  
+    <!-- Slick slider theme -->
+    <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}" />
+  
+    <!-- Font awesome style -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" /> <!-- Added rel="stylesheet" -->
+  
+    <!-- Custom styles for this template -->
+    <!-- <link href="{% static 'css/style.css' %}" rel="stylesheet" /> -->
+  
+    <!-- Responsive style -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  
+  </head>
+  
+<body>
+
+
+
+    <!-- footer section -->
+ 
+    <!-- info section -->
+    <section class="info_section layout_padding2">
+        <div class="container">
+          <div class="row info_form_social_row">
+            <div class="col-md-8 col-lg-9">
+               <!--<div class="info_form">
+                <form action="">
+                  <input type="email" placeholder="Enter your email">
+                  <button>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </form> 
+              </div>-->
+            </div>
+            <div class="col-md-4 col-lg-3">
+  
+              <div class="social_box">
+                <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://x.com/yourpage" target="_blank" rel="noopener noreferrer">
+                  <i class="fa fa-twitter" aria-hidden="true"></i> <!-- 'fa-twitter' works for X as well -->
+                </a>
+                <a href="https://linkedin.com/company/yourpage" target="_blank" rel="noopener noreferrer">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="row info_main_row">
+            <div class="col-md-6 col-lg-3">
+              <div class="info_links">
+                <h4>
+                  Menu
+                </h4>
+                <div class="info_links_menu">
+                  <a href="{% url 'index' %}">
+                    Home
+                  </a>
+                  <a href="{% url 'about' %}">
+                    About
+                  </a>
+                  <a href="{% url 'honey' %}">
+                    Honey
+                  </a>
+                  <a href="{% url 'testimonial' %}">
+                    Testimonial
+                  </a>
+                  <a href="{% url 'contact' %}">
+                    Contact us
+                  </a>
+                </div>
+  
+  
+  
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="info_insta">
+                <h4>
+                  Instagram
+                </h4>
+                <div class="insta_box">
+                  <div class="img-box">
+                    <img src="{% static 'images/insta1.jpg' %}" alt="">
+                  </div>
+                  <p>
+                    Sunshine in a Jar
+                  </p>
+                </div>
+                <div class="insta_box">
+                  <div class="img-box">
+                    <img src="{% static 'images/insta2.jpg' %}" alt="">
+                  </div>
+                  <p>
+                    Bee crafted goodness
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="info_detail">
+                <h4>
+                  Company
+                </h4>
+                <p class="mb-0" style="color: #333333;">
+                  Sustainably sourced from Arua and Congo, delivering natural sweetness and
+                  unmatched purity in every jar.
+                 
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h4>
+                Contact Us
+              </h4>
+              <div class="info_contact">
+                <a href="">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>
+                    Bukoto, Mulimira
+                  </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span>
+                    Call +256 776178913
+                  </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-envelope"></i>
+                  <span>
+                    ceciliaheavens256@gmail.com
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- end info_section -->
+  
+    </div>
+  
+    
+    <footer class="container-fluid footer_section">
+      <div class="container">
+        <div class="col-md-11 col-lg-8 mx-auto">
+          <p>
+            &copy; <span id="displayYear"></span> All Rights Reserved By
+            <a href="https://html.design/">CecilHoney</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section -->
+  </body>
+
+</html>

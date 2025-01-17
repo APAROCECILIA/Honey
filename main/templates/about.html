@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +14,6 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Company</title>
 
 
   <!-- bootstrap core css -->
@@ -27,13 +27,13 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
   <!-- slick slider -->
 
-  <link rel="stylesheet" href="css/slick-theme.css" />
+  <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}" />
   <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
 
 </head>
 
@@ -42,47 +42,38 @@
   <div class="main_body_content">
 
     <div class="hero_area">
-      <!-- header section strats -->
+      <!-- header section start -->
       <header class="header_section">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index.html">
-              ChocoLux
+              ABOUT
             </a>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class=""> </span>
             </button>
 
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item ">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                  <a class="nav-link" href="{% url 'index' %}">Home</a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="about.html"> About</a>
+                <li class="nav-item {% if request.path == '/about/' %}active{% endif %}">
+                  <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="chocolate.html">Chocolates</a>
+                <li class="nav-item {% if request.path == '/honey/' %}active{% endif %}">
+                  <a class="nav-link" href="{% url 'honey' %}">Honey</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="testimonial.html">Testimonial</a>
+                <li class="nav-item {% if request.path == '/testimonial/' %}active{% endif %}">
+                  <a class="nav-link" href="{% url 'testimonial' %}">Testimonial</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
+                <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
+                  <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                 </li>
               </ul>
-              <div class="quote_btn-container">
-                <form class="form-inline">
-                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-                </form>
-                <a href="">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                </a>
-              </div>
             </div>
+            
           </nav>
         </div>
       </header>
@@ -102,18 +93,24 @@
                 </h2>
               </div>
               <p>
-                Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web pagend web page editors now use Lorem Ipsum as their default model text, </p>
+                Established a year ago, our journey began with a passion for delivering the finest honey
+                 sourced from the lush, vibrant terrains of Arua and Congo. Every jar we offer is a 
+                 testament to our unwavering commitment to quality, ensuring you receive pure, 
+                 unprocessed honey that’s rich in flavor and nutrients. By embracing sustainable 
+                practices and fostering strong partnerships with local beekeepers, we aim to support 
+                communities while preserving nature's harmony. Our honey is more than a product—it's a
+                celebration of craftsmanship, care, and the natural abundance of the hive. Let us 
+                bring the sweetness of nature to your table, one golden drop at a time</p>
               <a href="#">
                 <span>
-                  Read More
+                  Cecil Honey
                 </span>
-                <img src="images/color-arrow.png" alt="">
               </a>
             </div>
           </div>
           <div class="col-md-6">
             <div class="img-box">
-              <img src="images/about-img.png" alt="">
+              <img src="{% static 'images/about1.jpg' %}" alt="">
             </div>
           </div>
         </div>
@@ -122,148 +119,19 @@
 
     <!-- end about section -->
 
+     <!-- footer start -->
+{% include 'footer.html' %}
 
-    <!-- info section -->
-    <section id = "info" class="info_section layout_padding2">
-      <div class="container">
-        <div class="row info_form_social_row">
-          <div class="col-md-8 col-lg-9">
-            <div class="info_form">
-              <form action="">
-                <input type="email" placeholder="Enter your email">
-                <button>
-                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="col-md-4 col-lg-3">
-
-            <div class="social_box">
-              <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="row info_main_row">
-          <div class="col-md-6 col-lg-3">
-            <div class="info_links">
-              <h4>
-                Menu
-              </h4>
-              <div class="info_links_menu">
-                <a href="index.html">
-                  Home
-                </a>
-                <a href="about.html">
-                  About
-                </a>
-                <a href="honey.html">
-                  Honey
-                </a>
-                <a href="testimonial.html">
-                  Testimonial
-                </a>
-                <a href="contact.html">
-                  Contact us
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_insta">
-              <h4>
-                Instagram
-              </h4>
-              <div class="insta_box">
-                <div class="img-box">
-                  <img src="images/insta-img.png" alt="">
-                </div>
-                <p>
-                  long established fact that a reader
-                </p>
-              </div>
-              <div class="insta_box">
-                <div class="img-box">
-                  <img src="images/insta-img.png" alt="">
-                </div>
-                <p>
-                  long established fact that a reader
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_detail">
-              <h4>
-                Company
-              </h4>
-              <p class="mb-0">
-                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <h4>
-              Contact Us
-            </h4>
-            <div class="info_contact">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Location
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope"></i>
-                <span>
-                  demo@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end info_section -->
-
-  </div>
-
-  <!-- footer section -->
-  <footer class="container-fluid footer_section">
-    <div class="container">
-      <div class="col-md-11 col-lg-8 mx-auto">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a>
-        </p>
-      </div>
-    </div>
-  </footer>
   <!-- footer section -->
 
   <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
   <!-- slick slider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
   <!-- custom js -->
-  <script src="js/custom.js"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
 
 </body>
 

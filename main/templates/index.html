@@ -16,7 +16,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Cecil</title>
+  <title>Cecil Honey</title>
 
   <!-- FavIcon -->
   <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
@@ -53,10 +53,6 @@
   <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
 
 </head>
-
-
-
-
 
 
 <body>
@@ -106,8 +102,10 @@
       <!-- slider section -->
       <section class="slider_section ">
         <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+
           <div class="carousel-inner">
             <div class="carousel-item active">
+
               <div class="container">
                 <div class="row">
                   <div class="col-md-6">
@@ -525,143 +523,10 @@
 
     <!-- end contact section -->
 
-
-    <!-- info section -->
-    <section class="info_section layout_padding2">
-      <div class="container">
-        <div class="row info_form_social_row">
-          <div class="col-md-8 col-lg-9">
-            <div class="info_form">
-              <form action="">
-                <input type="email" placeholder="Enter your email">
-                <button>
-                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="col-md-4 col-lg-3">
-
-            <div class="social_box">
-              <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="row info_main_row">
-          <div class="col-md-6 col-lg-3">
-            <div class="info_links">
-              <h4>
-                Menu
-              </h4>
-              <div class="info_links_menu">
-                <a href="{% url 'index' %}">
-                  Home
-                </a>
-                <a href="{% url 'about' %}">
-                  About
-                </a>
-                <a href="{% url 'honey' %}">
-                  Honey
-                </a>
-                <a href="{% url 'testimonial' %}">
-                  Testimonial
-                </a>
-                <a href="{% url 'contact' %}">
-                  Contact us
-                </a>
-              </div>
-
-
-
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_insta">
-              <h4>
-                Instagram
-              </h4>
-              <div class="insta_box">
-                <div class="img-box">
-                  <img src="{% static 'images/insta1.jpg' %}" alt="">
-                </div>
-                <p>
-                  Sunshine in a Jar
-                </p>
-              </div>
-              <div class="insta_box">
-                <div class="img-box">
-                  <img src="{% static 'images/insta2.jpg' %}" alt="">
-                </div>
-                <p>
-                  Bee crafted goodness
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_detail">
-              <h4>
-                Company
-              </h4>
-              <p class="mb-0" style="color: #333333;">
-                Sustainably sourced from Arua and Congo, delivering natural sweetness and
-                unmatched purity in every jar.
-               
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <h4>
-              Contact Us
-            </h4>
-            <div class="info_contact">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Bukoto, Mulimira
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +256 776178913
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope"></i>
-                <span>
-                  ceciliaheavens256@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end info_section -->
-
-  </div>
-
-  <!-- footer section -->
-  <footer class="container-fluid footer_section">
-    <div class="container">
-      <div class="col-md-11 col-lg-8 mx-auto">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">CecilHoney</a>
-        </p>
-      </div>
-    </div>
-  </footer>
+<!-- footer section -->
+ 
+{% include 'footer.html' %}
+   
   <!-- footer section -->
   <!-- jQuery -->
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
@@ -675,9 +540,7 @@
   <!-- Custom JS -->
   <script src="{% static 'js/custom.js' %}"></script>
 
-  <!-- Google Map -->
-  <!-- <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script> -->
+ 
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
@@ -704,7 +567,7 @@
 
 
 
-    <!-- End Google Map -->
+   
 
 
 </body>
