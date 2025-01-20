@@ -15,6 +15,10 @@
 
   <title>Honey</title>
 
+   <!-- FavIcon -->
+   <link rel="icon" type="image/png" href="{% static 'images/honey fav.ico' %}">
+
+
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
@@ -47,7 +51,7 @@
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index.html">
-              CecilHoney
+              Honey
             </a>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,7 +113,7 @@
               <h5>
                 In all QTY
               </h5>
-              <a href="">
+              <a href="" class="buynow">
                 BUY NOW
               </a>
             </div>
@@ -125,7 +129,7 @@
               <h5>
                UGX 1K
               </h5>
-              <a href="">
+              <a href="" class="buynow">
                 BUY NOW
               </a>
             </div>
@@ -141,7 +145,7 @@
               <h5>
                UGX 3K
               </h5>
-              <a href="">
+              <a href="" class="buynow">
                 BUY NOW
               </a>
             </div>
@@ -157,7 +161,7 @@
               <h5>
                 UGX 8K
               </h5>
-              <a href="">
+              <a href="" class="buynow">
                 BUY NOW
               </a>
             </div>
@@ -173,7 +177,7 @@
               <h5>
                UGX 25K
               </h5>
-              <a href="">
+              <a href="" class="buynow">
                 BUY NOW
               </a>
             </div>
@@ -189,7 +193,7 @@
               <h5>
                 UGX 100k
               </h5>
-              <a href="">
+              <a href="" class="buynow">
                 BUY NOW
               </a>
             </div>
@@ -216,5 +220,18 @@
   <script src="js/custom.js"></script>
 
 </body>
+
+
+<!-- buy now button -->
+<script>
+  // Select all elements with the "buy-now" class
+  const buyNowButtons = document.querySelectorAll('.buynow');
+  
+  // Loop through each button and set the href attribute
+  buyNowButtons.forEach(button => {
+    button.setAttribute('href', 'https://wa.me/+256776178913?text=Hello,%20I\'m%20interested%20in%20buying!');
+    button.setAttribute('target', '_blank'); // Optional: Open link in a new tab
+  });
+</script>
 
 </html>

@@ -19,7 +19,7 @@
   <title>Cecil Honey</title>
 
   <!-- FavIcon -->
-  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+  <link rel="icon" type="image/png" href="{% static 'images/honey fav.ico' %}">
 
 
   <!-- Maps -->
@@ -258,7 +258,7 @@
               <h5>
                 In all Qty
               </h5>
-              <a href="">
+              <a href="" class="buynow" >
                 BUY NOW
               </a>
             </div>
@@ -274,7 +274,7 @@
               <h5>
                 UGX 1K
               </h5>
-              <a href="">
+              <a href="" class="buynow">
                 BUY NOW
               </a>
             </div>
@@ -290,7 +290,7 @@
               <h5>
                 UGX 3K
               </h5>
-              <a href="">
+              <a href="" class="buynow">
                 BUY NOW
               </a>
             </div>
@@ -306,7 +306,7 @@
               <h5>
                 UGX 8K
               </h5>
-              <a href="">
+              <a href="" class="buynow">
                 BUY NOW
               </a>
             </div>
@@ -322,7 +322,7 @@
               <h5>
                 UGX 25K
               </h5>
-              <a href="">
+              <a href="" class="buynow">
                 BUY NOW
               </a>
             </div>
@@ -338,7 +338,7 @@
               <h5>
                 UGX 100K
               </h5>
-              <a href="">
+              <a href="" class="buynow">
                 BUY NOW
               </a>
             </div>
@@ -359,10 +359,10 @@
               Cecil Pure Honey
             </h2>
             <h3>
-              Nanture's Golden Gift<br>
+              Nature's Golden Gift<br>
               Sourced With Care, Shared With Love!
             </h3>
-            <a href="">
+            <a href="" class="buynow">
               Buy Now
             </a>
           </div>
@@ -488,25 +488,30 @@
                   Contact Us
                 </h2>
               </div>
-              <form action="">
+
+            
+
+               <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
                 <div>
-                  <input type="text" placeholder="Full Name " />
+                  <input type="text" id="fullName" placeholder="Full Name" required />
                 </div>
                 <div>
-                  <input type="text" placeholder="Phone number" />
+                  <input type="text" id="phoneNumber" placeholder="Phone Number" required />
                 </div>
                 <div>
-                  <input type="email" placeholder="Email" />
+                  <input type="email" id="email" placeholder="Email" required />
                 </div>
                 <div>
-                  <input type="text" class="message-box" placeholder="Message" />
+                  <textarea id="message" class="message-box" placeholder="Message" required></textarea>
                 </div>
-                <div class="d-flex ">
-                  <button>
-                    SEND NOW
-                  </button>
+                <div class="d-flex">
+                  <button type="submit">SEND NOW</button>
                 </div>
               </form>
+
+
+
+
             </div>
           </div>
           <div class="col-md-6 px-0">
@@ -557,7 +562,46 @@
     const marker = L.marker([0.3617, 32.5912]).addTo(map);
     marker.bindPopup('<b>Bukoto</b><br>A location in Uganda.').openPopup();
   </script>
+
+
+<!-- buy now button -->
+<script>
+  // Select all elements with the "buy-now" class
+  const buyNowButtons = document.querySelectorAll('.buynow');
   
+  // Loop through each button and set the href attribute
+  buyNowButtons.forEach(button => {
+    button.setAttribute('href', 'https://wa.me/+256776178913?text=Hello,%20I\'m%20interested%20in%20buying!');
+    button.setAttribute('target', '_blank'); // Optional: Open link in a new tab
+  });
+</script>
+  
+<!-- form action -->
+
+<script>
+  function sendToWhatsApp(event) {
+    event.preventDefault(); // Prevent form from submitting the traditional way
+
+    // Get the input values
+    const fullName = document.getElementById("fullName").value;
+    const phoneNumber = document.getElementById("phoneNumber").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Construct the WhatsApp message URL
+    const whatsappNumber = "+256776178913"; // Replace with your WhatsApp number
+    const whatsappMessage = `Hello, I would like to send you the following information:%0A%0A` +
+      `*Full Name:* ${fullName}%0A` +
+      `*Phone Number:* ${phoneNumber}%0A` +
+      `*Email:* ${email}%0A` +
+      `*Message:* ${message}`;
+
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    // Open WhatsApp with the pre-filled message
+    window.open(whatsappURL, "_blank");
+  }
+</script>
 
 
 

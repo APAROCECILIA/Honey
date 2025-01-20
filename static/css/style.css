@@ -842,10 +842,10 @@ a:focus {
 
 
 .info_section .social_box {
-  width: 100%;
+  
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  justify-content: flex-start;
 }
 
 .info_section .social_box a {
